@@ -1,0 +1,14 @@
+h2{
+    text-align: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+}
+button{
+    margin-top: 20px;
+    background-color: grey;
+    width: 70px;
+    margin-left: 50px;
+}

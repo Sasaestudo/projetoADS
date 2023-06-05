@@ -1,0 +1,10 @@
+ul{
+    display: flex;
+    flex-direction: column;
+}
+li{
+    margin-bottom: 5px;
+}
+.lista:nth-child(2n){
+    background-color: rgb(195, 205, 215);
+}
