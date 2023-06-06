@@ -3,7 +3,7 @@ import './navbar.css';
 
 export default function Navbar() {
   return (
-    <>
+    
       <ul className='listaMenu'>
         <li>
           <NavLink to="/">Home</NavLink>
@@ -25,6 +25,6 @@ export default function Navbar() {
         </li>
         <input type="button" value="sair" />
       </ul>
-    </>
+    
   );
 }

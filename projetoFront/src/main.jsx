@@ -1,12 +1,12 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import {ContatosContextProvider} from './contexts/ContatosContext.jsx'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App.jsx';
+import { PedidosContextProvider } from './contexts/PedidosContext.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <ContatosContextProvider>
+    <PedidosContextProvider>
       <App />
-    </ContatosContextProvider>
+    </PedidosContextProvider>
   </React.StrictMode>,
-)
+);

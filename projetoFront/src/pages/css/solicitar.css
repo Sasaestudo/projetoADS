@@ -4,7 +4,9 @@ h2{
 form{
     display: flex;
     flex-direction: column;
+    align-content: center;
     width: 180px;
+    margin: 0px;
 }
 button{
     margin-top: 20px;
