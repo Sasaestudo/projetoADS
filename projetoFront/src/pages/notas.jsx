@@ -1,4 +1,4 @@
-import './css/notas.css';
+import './css/tabelas.css';
 export default function notas(){
     return(
         <>

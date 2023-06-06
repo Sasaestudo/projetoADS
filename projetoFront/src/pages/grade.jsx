@@ -1,3 +1,5 @@
+import './css/tabelas.css';
+
 export default function grade(){
     return(
         <>            
