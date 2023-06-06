@@ -1,40 +1,54 @@
 import { useContext } from 'react';
-import {useForm} from 'react-hook-form'
-import {ContatosContext} from '../contexts/ContatosContext.jsx';
+import { useForm } from 'react-hook-form';
+import { PedidosContext } from '../contexts/PedidosContext.jsx';
 import { useNavigate } from 'react-router-dom';
-import './css/solicitar.css'
+import './css/solicitar.css';
 
+export default function Novo() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const { incluirPedido } = useContext(PedidosContext);
+  const navigate = useNavigate();
 
-export default function Novo(){
-   
-    const { register, handleSubmit, formState: { errors } } = useForm();
-    const {incluirContato} = useContext(ContatosContext)
-    const navigate = useNavigate()
+  function onSubmit(data) {
+    incluirPedido(data), navigate('/');
+  }
+  const { meusPedidos } = useContext(PedidosContext);
+  return (
+    <>
+      <h2>Nova Solicitação</h2>
+      <form onSubmit={handleSubmit(onSubmit) }>
+        <label for="opcoes">Departamento</label>
+        <select defaultValue={""} name="opcoes" {...register('nome', { required: 'Campo Obrigatório!' })}
+        >
+          <option disabled ></option>
+          <option>Coordenação Curso</option>
+          <option>Financeiro</option>
+          <option>Secretaria Acadêmica</option>
+        </select>
 
-    function onSubmit(data){
-        incluirContato(data),
-        navigate("/")
-    }
-    
+        <label>Mensagem</label>
+        <textarea
+          minLength={10}
+          rows="4"
+          cols="50"
+          placeholder="Digite aqui..."
+          {...register('msg', { required: 'Campo Obrigatório' })}></textarea>
+        {errors.msg && <p>{errors.msg.message}</p>}
 
-   
-   
-    return(
-        <>
-        <h2>Nova Solicitação</h2>
-        <form onSubmit={handleSubmit(onSubmit)}>
-            <label>Nome</label>
-            <input type="text" autoComplete='off' {...register('nome', {required:"Campo Obrigatório"})} />
-            {errors.nome && <p>{errors.nome.message}</p>}
+        <button type="submit">Enviar</button>
+      </form>
 
-            <label>Telefone</label>
-            <textarea rows="4" cols="50" placeholder="Digite seu comentário..."{...register('telefone', {required:"Campo Obrigatório"})}></textarea>
-            {/* <input type="number" {...register('telefone', {required:"Campo Obrigatório"})} /> */}
-            {errors.telefone && <p>{errors.telefone.message}</p>}
-
-            <button type="submit">Enviar</button>
-
-        </form>
-        </>
-    )
+      <h2>Minhas Solicitações</h2>
+      <ul>
+        {meusPedidos.map((pedido, index) => (
+          <li className="lista" id={index}>{pedido.nome} - {pedido.msg}
+          <p>Resposta:</p></li>
+        ))}
+      </ul>
+    </>
+  );
 }

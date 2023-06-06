@@ -7,9 +7,10 @@ import { UserContextProvider } from './contexts/UserContext.jsx'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <UserContextProvider>
-    <ContatosContextProvider>
+    <PedidosContextProvider>
       <App />
-    </ContatosContextProvider>
+    </PedidosContextProvider>
     </UserContextProvider>
   </React.StrictMode>
 )
+

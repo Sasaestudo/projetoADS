@@ -9,8 +9,6 @@ export default function Layout(){
         <>
         <header>
             <h1>FACIT</h1>
-            <div>
-        </div>
             <Navbar />
         </header>
         <main>

@@ -1,18 +1,21 @@
-import { useContext } from "react"
+import { useContext } from 'react';
 import './css/solicitacoes.css';
-import {ContatosContext} from "../contexts/ContatosContext.jsx"
+import { PedidosContext } from '../contexts/PedidosContext.jsx';
 
-export default function solicitacoes(){
-    const {meusContatos} = useContext(ContatosContext)
+export default function solicitacoes() {
+  const { meusPedidos } = useContext(PedidosContext);
+
+  return (
+    <>
+      <h2>Historico de Solicitações</h2>
+      <ul>
+        {meusPedidos.map((pedido, index) => (
+          <li className="lista" id={index}>
+            {pedido.nome} - {pedido.msg}
+          </li>
+        ))}
+      </ul>
+    </>
     
-    return(
-        <>
-     <h2>Historico de Solicitações</h2>  
-         <ul>
-                {meusContatos.map((contato, index) =>
-                <li className="lista" id={index}>{contato.nome} - {contato.telefone}</li>)}
-        </ul>
-
-        </>
-    )
+  );
 }
