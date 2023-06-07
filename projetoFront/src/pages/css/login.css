@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500;600&family=PT+Sans&family=Poppins:wght@200;300;400;600;700&family=Roboto:wght@100;400;900&display=swap');
+
+ /* reset CSS*/
+*, 
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+
+}
+
+.form-login {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  section{
+    background-color: #050618;
+  }
+
+  .containerLogin{
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 3%;
+    margin: 1%;
+    border-radius: 5px;
+    border: 2px solid #f2f5f7;
+    background-color: #dfdddd;
+    box-shadow: 2px 2px 2px 1px #02030c;
+  }
+
+  button{
+   /* background-color: #4e0a00;*/
+    background-color: #e17d00;
+    border-radius: 3px;
+    border: 2px solid #e17d00;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    padding: 2px;
+    color: #f2f2f2/*#253C59*/;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+  }
+
+  button:hover{
+    background-color: #c06f0b;
+  }
+
+  containerLogin, h1, h2{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 1.5em;
+    padding: 0 2rem;
+    color: #2e2e2e;
+    margin-bottom:1rem;
+
+  }
+
+  containerLogin, input{
+    background-color: #dfdddd;
+    border-bottom: 1px solid #717174;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 0.7em;
+    padding: 5px 0;
+    margin: 0 0 15px 0 ;
+    width: 100%;
+    }
+    
+    input:active :focus-visible{
+    border-bottom: 2px solid  #777779;
+  }
+
+  p.erro{
+    padding: 8px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 0.6em;
+    font-style: italic; 
+    color: #e72c0f;
+
+  }
+
+  containerLogin, label{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.8em;
+    padding: 5px 0;
+    margin:15px 0px;
+    color: #2e2e2e;
+  }
+
