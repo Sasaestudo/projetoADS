@@ -6,7 +6,7 @@ export default function Navbar() {
     
       <ul className='listaMenu'>
         <li>
-          <NavLink to="/">Home</NavLink>
+          <NavLink to="/home">Home</NavLink>
         </li>
         <li>
           <NavLink to="/notas">Notas</NavLink>
