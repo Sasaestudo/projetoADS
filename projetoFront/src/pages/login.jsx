@@ -1,14 +1,14 @@
-import LoginForm from './loginForm'
-import LoginRHF from './loginRHF'
-//import './css/App.css'
+import LoginForm from "./loginForm"
+import './css/login.css'
 
-
-export default function Login(props) {
-    return (
-        <>
-            <h1></h1>
-            {/* <LoginForm onSubmit={handleClick} /> */}
-            <LoginRHF />
-        </>
-    )
+export default function Login() {
+  return (
+    <section className="form-login">
+      <div className="containerLogin">
+      <h1>FACIT</h1>
+      <h2>Login</h2>
+      <LoginForm />
+      </div>
+    </section>
+  )
 }
