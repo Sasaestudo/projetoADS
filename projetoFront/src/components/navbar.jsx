@@ -1,7 +1,18 @@
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
+import { useContext } from 'react';
+import UserContext from '../contexts/UserContext'
 import './navbar.css';
 
+
+
 export default function Navbar() {
+
+const {handleLogout} = useContext(UserContext)
+
+const handleSair=() => {
+  handleLogout()
+}
+  
   return (
     
       <ul className='listaMenu'>
@@ -23,7 +34,10 @@ export default function Navbar() {
         <li>
           <NavLink to="/solicitacoes">Solicitações</NavLink>
         </li>
-        <input type="button" value="sair" />
+        <li>
+        <Link to="/" onClick={handleSair}>Sair</Link>
+        </li> 
+       
       </ul>
     
   );
