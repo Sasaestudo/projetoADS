@@ -14,7 +14,7 @@ export default function Novo() {
   const navigate = useNavigate();
 
   function onSubmit(data) {
-    incluirPedido(data), navigate('/');
+    incluirPedido(data), navigate('/solicitar');
   }
   const { meusPedidos } = useContext(PedidosContext);
   return (
