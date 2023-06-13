@@ -10,7 +10,9 @@ export default function solicitacoes() {
 
   return (
     <>
-      <h2>Historico de Solicitações</h2>
+    <section className='ContainerSection'>
+      <h1>Historico de Solicitações</h1>
+      <div className='Tabelas'>
         <table>
           <tbody>
             <tr>
@@ -36,6 +38,8 @@ export default function solicitacoes() {
                 </tr>))}
           </tbody>
         </table>
+      </div>
+      </section>
     </>  
   )
 }

@@ -2,6 +2,7 @@ import './css/tabelas.css';
 export default function notas(){
     return(
         <>
+        <section className='ContainerSection'>
         <h1>Notas</h1>
             <table>
                      <tr>
@@ -75,7 +76,7 @@ export default function notas(){
                     <td>Reprovado</td>                    
                 </tr>
             </table> 
-
+        </section>
         </>
     )
 }

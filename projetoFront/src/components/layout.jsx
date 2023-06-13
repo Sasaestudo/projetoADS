@@ -8,13 +8,14 @@ export default function Layout(){
     return(
         <>
         <header>
-            <h1>FACIT</h1>
             <Navbar />
         </header>
         <main>
             <Outlet />
         </main>       
+        <footer>
             <Footer />
+        </footer>
         </>
     )
 }

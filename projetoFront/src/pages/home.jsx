@@ -1,5 +1,7 @@
 export default function home(){
   return(
-<h1>Pagina Inicial</h1>
+  <section className="ContainerSection">
+    <h1>Pagina Inicial</h1>
+  </section>
   )
 }

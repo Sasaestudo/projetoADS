@@ -2,7 +2,8 @@ import './css/tabelas.css';
 
 export default function grade(){
     return(
-        <>            
+        <> 
+        <section className='ContainerSection'>           
         <h1>Grade Horária</h1>
             <table>
                 <tr>
@@ -42,7 +43,7 @@ export default function grade(){
                     <td>204<thead>106</thead></td>                                                                          
                 </tr>
             </table>
-
+        </section>
         </>
     )
 }

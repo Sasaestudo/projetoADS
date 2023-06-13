@@ -1,17 +1,10 @@
 header {
-    flex: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #232D36;
-    padding-left: 8px;
-    padding-right: 8px;
+  background-color: #232D36;
+  padding: 1%;
   }
   
   main {
     flex: 8;
-    padding-left: 8px;
-    padding-right: 8px;
   }
   
   footer {
@@ -19,7 +12,7 @@ header {
   }
   footer li{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
   }
 
   
