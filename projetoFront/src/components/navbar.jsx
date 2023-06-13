@@ -28,9 +28,9 @@ const handleSair=() => {
         <li>
           <NavLink to="/financeiro">Financeiro</NavLink>
         </li>
-        <li>
+        {/* <li>
           <NavLink to="/solicitar">Solicitar</NavLink>
-        </li>
+        </li> */}
         <li>
           <NavLink to="/solicitacoes">Solicitações</NavLink>
         </li>
