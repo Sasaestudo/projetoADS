@@ -16,7 +16,7 @@ export default function solicitacoes() {
 
 <section className='ContainerSection'>
       <h1>Historico de Solicitações</h1>
-      <div className='Tabelas'>
+      <div className='tabela'>
         <table>
         <tbody>
           <tr>
@@ -25,22 +25,22 @@ export default function solicitacoes() {
             <th>Status</th>
           </tr>
           <tr>
-            <th>Financeiro</th>
-            <th>Meu desconto de matrícula não apareceu no boleto.</th>
-            <th>V (icone deferido)</th>
+            <td>Financeiro</td>
+            <td>Meu desconto de matrícula não apareceu no boleto.</td>
+            <td>V (icone deferido)</td>
           </tr>
           <tr>
-            <th>Secretaria Acadêmica</th>
-            <th>Gostaria de ir para a turma 3ADS2</th>
-            <th>X (icone indeferido)</th>
+            <td>Secretaria Acadêmica</td>
+            <td>Gostaria de ir para a turma 3ADS2</td>
+            <td>X (icone indeferido)</td>
           </tr>
           {meusPedidos.map((pedido, index) => (
             <tr key={index}>
-              <th>{pedido.nome}</th>
-              <th>{pedido.msg}</th>
-              <th novaSolicitacao>
+              <td>{pedido.nome}</td>
+              <td>{pedido.msg}</td>
+              <td novaSolicitacao>
                 <img src={ampulheta} alt="status" width="20px" />
-              </th>
+              </td>
             </tr>
           ))}
         </tbody>

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500;600&family=PT+Sans&family=Poppins:wght@200;300;400;600;700&family=Roboto:wght@100;400;900&display=swap');
 
-.form-login {
+.tela-login {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -9,10 +9,14 @@
     
   }
 
-  
-  .form-login, section{
+  .tela-login, section{
     background-color: #050618;
   }
+
+  .form-login{
+    display: contents;
+  }
+
 
   .containerLogin{
     display: flex;
@@ -30,17 +34,25 @@
 
 
 
-  containerLogin, h1, h2{
+  .containerLogin h1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 1.8em;
+    padding: 0 2rem;
+    color: #2e2e2e;
+    margin-bottom:1rem;
+  }
+
+  .containerLogin h2{
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
     font-size: 1.5em;
     padding: 0 2rem;
     color: #2e2e2e;
     margin-bottom:1rem;
-
   }
 
-  containerLogin, input{
+  .form-login input{
     background-color: #dfdddd;
     border-bottom: 1px solid #717174;
     font-family: 'Roboto', sans-serif;
@@ -50,9 +62,13 @@
     margin: 0 0 15px 0 ;
     width: 100%;
     }
+
+    .form-login input{
+      border-bottom: 1px solid #717174;
+    }
     
-    input:active :focus-visible{
-    border-bottom: 2px solid  #777779;
+    .form-login input:focus-visible{
+    border-bottom: 2px solid  #c06f0b;
   }
 
   p.erro{

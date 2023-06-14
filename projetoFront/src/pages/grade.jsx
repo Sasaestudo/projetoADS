@@ -5,6 +5,7 @@ export default function grade(){
         <> 
         <section className='ContainerSection'>           
         <h1>Grade Horária</h1>
+        <div className='tabela'>
             <table>
                 <tr>
                     <th>Dia</th>
@@ -43,6 +44,7 @@ export default function grade(){
                     <td>204<thead>106</thead></td>                                                                          
                 </tr>
             </table>
+        </div>
         </section>
         </>
     )

@@ -4,8 +4,9 @@ export default function notas(){
         <>
         <section className='ContainerSection'>
         <h1>Notas</h1>
+            <div className='tabela'>
             <table>
-                     <tr>
+                    <tr>
                     <th>Disciplina</th>
                     <th>A1</th>
                     <th>A2</th>
@@ -76,6 +77,7 @@ export default function notas(){
                     <td>Reprovado</td>                    
                 </tr>
             </table> 
+            </div>
         </section>
         </>
     )

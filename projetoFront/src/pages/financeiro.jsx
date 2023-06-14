@@ -35,7 +35,6 @@ export default function financeiro() {
                 <td>R$ 504,69</td>
                 <td>Pago</td>
               </tr>
-
               <tr>
                 <td>02/2023</td>
                 <td>07/02/2023</td>

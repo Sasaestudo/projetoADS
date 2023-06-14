@@ -44,7 +44,7 @@ export default function LoginForm(props) {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form onSubmit={handleSubmit(onSubmit)} className='form-login'>
       {errorLogin && <p className="erro">{errorLogin}</p>}
       <div>
         <label htmlFor="email">Email</label>
