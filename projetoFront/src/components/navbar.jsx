@@ -4,7 +4,6 @@ import UserContext from '../contexts/UserContext'
 import './navbar.css';
 
 
-
 export default function Navbar() {
 
 const {handleLogout} = useContext(UserContext)

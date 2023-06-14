@@ -60,7 +60,7 @@ export default function solicitacoes() {
               setModalOpen(true);
             }}
           >
-            incluir
+            Incluir
           </button>
         </div>
       </div>
