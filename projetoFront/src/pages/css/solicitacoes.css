@@ -6,7 +6,7 @@
    align-items: center;
 }
 .backdrop{
-    margin-top: 50px;
+    margin-top: 0px;
     width: 100vw;
     height: 100vh;
     top: 0;
@@ -20,6 +20,7 @@
 .modalClose{
     cursor: pointer;
     margin: 5px;
+    padding: 3px;
 }
 
 .modal{
