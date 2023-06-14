@@ -3,9 +3,9 @@ import maio23PDF from "../assets/boletos/maio23.pdf"
 export default function financeiro(){
     return(
         <>
+        <section className='ContainerSection'>
         <h1>Financeiro</h1>
             <div className='tabela-container'>
-
             <table>
                 <tbody>
                     <tr>
@@ -59,7 +59,7 @@ export default function financeiro(){
                 </tbody>        
             </table>        
             </div>
-
+        </section>
         </>
     )
 }

@@ -1,32 +1,30 @@
-.tabela-container {
-  display: flex;
-  justify-content: center;
-}
+
+
 
 table {
-  border: 1px solid #000;
-  border-collapse: collapse;
-  width: 60%;
-  background: #f2f2f2;
+  background-color: #f2f2f2;
 
 }
 
-th, td {
-  border: 1px solid #000;
+.Tabelas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 8px;
-  text-align: left;
-  text-align: center;
-
 }
 
-th {
+.Tabelas, th {
   background: #ccc;
+  align-items: center;
+  padding: 8px;;
 }
 
-td {
+.Tabelas, td {
+  align-items: center;
   background: #fff;
+  padding: 8px;
 }
 
 .vencido {
-  color: red;
+  color: #e72c0f;;
 }

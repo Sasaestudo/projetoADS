@@ -12,10 +12,11 @@ const {handleLogout} = useContext(UserContext)
 const handleSair=() => {
   handleLogout()
 }
-  
+  // elementos do menu envolvidos dentro da tag nav. Traz h3 ue compõe o menu pra dentro do nav
   return (
-    
-      <ul className='listaMenu'>
+    <nav className='listaMenu'> 
+    <h3>FACIT</h3>
+      <ul>
         <li>
           <NavLink to="/home">Home</NavLink>
         </li>
@@ -33,12 +34,10 @@ const handleSair=() => {
         </li> */}
         <li>
           <NavLink to="/solicitacoes">Solicitações</NavLink>
-        </li>
-        <li>
-        <Link to="/" onClick={handleSair}>Sair</Link>
         </li> 
-       
       </ul>
+      <button><Link to="/" onClick={handleSair}>Sair</Link></button>
+    </nav>
     
   );
 }

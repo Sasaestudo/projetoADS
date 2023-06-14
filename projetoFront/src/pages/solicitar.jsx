@@ -19,7 +19,8 @@ export default function Novo() {
   const { meusPedidos } = useContext(PedidosContext);
   return (
     <>
-      <h2>Nova Solicitação</h2>
+      <section className='ContainerSection'>
+      <h1>Nova Solicitação</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
         <label for="opcoes">Departamento</label>
         <select
@@ -45,6 +46,7 @@ export default function Novo() {
 
         <button type="submit">Enviar</button>
       </form>
+    </section>
     </>
   );
 }

@@ -12,8 +12,11 @@ export default function solicitacoes() {
 
   return (
     <>
-      <h2>Historico de Solicitações</h2>
-      <table>
+
+<section className='ContainerSection'>
+      <h1>Historico de Solicitações</h1>
+      <div className='Tabelas'>
+        <table>
         <tbody>
           <tr>
             <th>Departamento</th>
@@ -41,6 +44,7 @@ export default function solicitacoes() {
           ))}
         </tbody>
       </table>
+</div>
       <div className="page">
         <Modal isOpen={modalOpen} setIsOpen={setModalOpen}>
           {' '}
@@ -60,8 +64,10 @@ export default function solicitacoes() {
           </button>
         </div>
       </div>
+</section>
     </>
   );
+
 }
 
 /* https://aluno-online-web.profjosereginal.repl.co/pages/requerimentos.html */

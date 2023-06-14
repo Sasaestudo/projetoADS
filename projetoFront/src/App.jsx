@@ -18,7 +18,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {logado ?
+
         <>
         <Route element={<Layout />}>
           <Route path="/home" element={<Home />} />
@@ -29,9 +29,9 @@ export default function App() {
           <Route path="/solicitacoes" element={<Solicitacoes />} />
         </Route>
         </>
-        :
+
         <Route path="/" element={<Login />} /> 
-        }
+
         <Route path="*" element={<Erro />} />
       </Routes>
     </BrowserRouter>
