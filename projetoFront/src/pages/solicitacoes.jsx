@@ -6,6 +6,7 @@ import ampulheta from '../assets/icones/ampulheta.png';
 import Modal from '../components/modal';
 import Solicitar from '../pages/solicitar';
 
+
 export default function solicitacoes() {
   const { meusPedidos } = useContext(PedidosContext);
   const [modalOpen, setModalOpen] = useState(false);
@@ -50,15 +51,11 @@ export default function solicitacoes() {
           {' '}
           {/* ele mesmo define se vai se renderizar ou não, permite seja fechado por ele mesmo(dentro dele)*/}
           <div>
-            <Solicitar />
+            <Solicitar setModalOpen={setModalOpen}/>
           </div>
         </Modal>
         <div>
-          <button
-            className="incluir"
-            onClick={() => {
-              setModalOpen(true);
-            }}
+          <button className="incluir" onClick={() => { setModalOpen(true)}}
           >
             Incluir
           </button>

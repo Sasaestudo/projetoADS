@@ -2,7 +2,7 @@ import qrcode from '../assets/icones/qrcodeFacit.png'
 import maio23PDF from '../assets/boletos/maio23.pdf';
 
 export default function Pagamento(){
-  return(
+return(
   <>
   <h1>Formas de Pagamento</h1>
   <h2>Imprimir</h2>

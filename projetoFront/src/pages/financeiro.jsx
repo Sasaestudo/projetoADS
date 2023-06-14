@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Modal from '../components/modal';
 import './css/tabelas.css';
-import Pagar from './pagamento';
+import Pagamento from './pagamento';
 
 export default function financeiro() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -71,7 +71,7 @@ export default function financeiro() {
       </section>
       <Modal isOpen={modalOpen} setIsOpen={setModalOpen}>
         <div>
-          <Pagar />
+          <Pagamento />
         </div>
       </Modal>
     </>
