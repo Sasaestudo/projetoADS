@@ -1,6 +1,7 @@
 header {
   background-color: #232D36;
   padding: 1%;
+  flex: 1;
   }
   
   main {
@@ -9,16 +10,5 @@ header {
   
   footer {
     flex: 1;
-  }
-  footer li{
-    display: flex;
-    flex-direction: row;
-  }
-
-  
-  h1 {
-    color: #9DA2A8;
-    font-size: 2rem;
-    text-align: center;
   }
   

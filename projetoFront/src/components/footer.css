@@ -1,0 +1,49 @@
+.listaFooter{  
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+    background-color: #cda700;
+    color:#232D36;
+}
+
+
+  .listaFooter a:hover:not(.active) {
+    text-decoration: underline;
+  }
+
+  .listaFooter li {
+    color: #232D36;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 0.7rem;
+  }
+
+  .listaFooter li a.active  {
+    color: #cda700;
+    font-weight: bolder;
+  }
+
+  .listaFooter ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: -webkit-fill-available;
+    margin: 0 15%;
+  }
+
+  .listaFooter h3{
+    color: #f2f2f2;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .listaFooter button a{
+    background-color: #e17d00;
+   border-radius: 3px;
+   border: 2px solid #e17d00;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 400;
+   padding: 2px;
+   color: #f2f2f2;
+  }
