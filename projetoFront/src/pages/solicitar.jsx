@@ -4,7 +4,7 @@ import { PedidosContext } from '../contexts/PedidosContext.jsx';
 import { useNavigate } from 'react-router-dom';
 import './css/solicitar.css';
 
-export default function Novo() {
+export default function Novo({setModalOpen}) {
   const {
     register,
     handleSubmit,
@@ -14,7 +14,7 @@ export default function Novo() {
   const navigate = useNavigate();
 
   function onSubmit(data) {
-    incluirPedido(data); navigate('/solicitacoes');
+    incluirPedido(data); navigate('/solicitacoes'); setModalOpen(false);
   }
   const { meusPedidos } = useContext(PedidosContext);
   return (

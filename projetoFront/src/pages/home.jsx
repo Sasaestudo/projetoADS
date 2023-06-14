@@ -1,5 +1,5 @@
 export default function home(){
-  return(
+    return(
   <section className="ContainerSection">
     <h1>Pagina Inicial</h1>
     <p>What is Lorem Ipsum?
