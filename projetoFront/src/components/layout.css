@@ -1,6 +1,7 @@
 header {
-  background-color: #232D36;
+  background-color: #050618/*#232D36;*/;
   padding: 1%;
+  flex: 0;
   }
   
   main {
@@ -8,17 +9,46 @@ header {
   }
   
   footer {
-    flex: 1;
-  }
-  footer li{
-    display: flex;
-    flex-direction: row;
+    flex: 0;
   }
 
-  
-  h1 {
-    color: #9DA2A8;
-    font-size: 2rem;
+  .ContainerSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #f2f2f2;
     text-align: center;
+    padding: 3%;
+    height: 100%;
+  }
+
+  .ContainerSection h1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 1.4em;
+    padding: 0 2rem;
+    color: #2e2e2e;
+    margin-bottom:1rem;
+  }
+
+  .ContainerSection h2{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 1.2em;
+    padding: 0 2rem;
+    color: #2e2e2e;
+    margin-bottom:1rem;
+  }
+
+  .ContainerSection p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 0.8em;
+    padding: 0 2rem;
+    color: #2e2e2e;
+    margin-bottom: 1rem;
+    text-align: justify;
+    width: 40%;
   }
   

@@ -1,3 +1,56 @@
+.ContainerSectionSolicitar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 3%;
+    border-radius: 8px;
+}
+
+
+.formSolicitar{
+    display: flex;
+    flex-direction: column;
+    width: 480px;
+    margin: 0px;
+    align-items: center;
+  }
+
+  .formSolicitar textarea{       
+    width:380px;
+    padding: 1%;
+    margin: 2%;
+    border: 1px solid #443e3e4a;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.05);
+    color:#253C59;
+  }
+
+  .formSolicitar select {
+    width:380px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    padding: 1%;
+    color:#253C59;
+    border: 1px solid #443e3e4a;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.05);
+  }
+
+  .formSolicitar button {
+    background-color: #e17d00;
+    border-radius: 3px;
+    border: 2px solid #e17d00;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    padding: 1%;
+    color: #f2f2f2/*#253C59*/;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+  }
+
+
+
 
 
 

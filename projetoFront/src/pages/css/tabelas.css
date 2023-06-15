@@ -1,30 +1,35 @@
 
 
 
-table {
-  background-color: #f2f2f2;
 
+.tabela {
+  display: table;
+  padding: 2px;
+  overflow-x: auto;
+  border-collapse: unset;
+  background-color: #fff;
 }
 
-.Tabelas {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 8px;
-}
-
-.Tabelas, th {
-  background: #ccc;
-  align-items: center;
+.tabela th {
+  background: #2e2e2e;
   padding: 8px;;
+  color: #f2f2f2;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 1em;
 }
 
-.Tabelas, td {
-  align-items: center;
-  background: #fff;
+.tabela td {
+  background: #fdfdfd;
   padding: 8px;
+  color: #2e2e2e;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 0.9em;
+  border-bottom: 1px solid #5e71bb;
 }
 
 .vencido {
   color: #e72c0f;;
+  cursor: pointer;
 }
