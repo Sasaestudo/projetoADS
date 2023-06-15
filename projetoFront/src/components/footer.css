@@ -14,10 +14,17 @@
   }
 
   .listaFooter li {
+
+    display: flex;
+    align-items: center;
     color: #232D36;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 0.7rem;
+  }
+
+  .listaFooter li svg{
+    margin-right: 5px;
   }
 
   .listaFooter li a.active  {
