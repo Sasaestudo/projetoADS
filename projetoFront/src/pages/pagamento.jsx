@@ -1,16 +1,25 @@
 import qrcode from '../assets/icones/qrcodeFacit.png'
 import maio23PDF from '../assets/boletos/maio23.pdf';
+import '../pages/css/pagamento.css'
 
 export default function Pagamento(){
 return(
   <>
+  <section className='ContainerSectionPagamento'>
   <h1>Formas de Pagamento</h1>
-  <h2>Imprimir</h2>
+  <div>
+  <h4>Imprimir</h4>
   <a href={maio23PDF} download>PDF</a>
-  <h2>Pix</h2>
-  <h4>211232142123123</h4>
-  <h2>QR Code</h2>
-  <img src={qrcode} alt="QR-Code" width="90px" />
+  </div>
+  <div>
+    <h4>Pix</h4>
+    <p>211232142123123</p>
+  </div>
+  <div>
+    <h4>QR Code</h4>
+    <img src={qrcode} alt="QR-Code" width="90px" />
+  </div>
+  </section>
 
   </>
   );
