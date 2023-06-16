@@ -1,11 +1,3 @@
-.ContainerSection{
-  height: 100vh;
-}
-.ContainerHome{
-  margin: 0px;
-  border: 0px;
-  padding: 0px;
-}
 .bloco1{
   display: flex;
   gap: 50px;
