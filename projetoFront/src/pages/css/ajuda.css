@@ -1,0 +1,27 @@
+.ajuda{
+    grid-row: 1/1;
+    margin-top: 20px;
+    background-color: #f2f2f2;
+    
+    }
+    .ajuda h1{
+      text-align: center;
+      background-color: #f2f2f2;
+      margin-bottom: 10px;
+    }
+    .ajuda div:nth-child(even) {
+      background-color:lightgray;}
+    .ajuda dt{
+      font-size: 18px;
+      margin-bottom: 2px;
+      
+    }
+    .ajuda dl{
+      font-size: 15px;
+    }
+    .ajuda dt, dl{
+      text-align: left;
+    }
+    .ajuda div:nth-child(-n+4) {
+      margin-bottom: 20px;
+    }
