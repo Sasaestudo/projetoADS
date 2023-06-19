@@ -8,6 +8,7 @@ import Financeiro from './pages/financeiro';
 import Pagamento from './pages/pagamento';
 import Solicitar from './pages/solicitar';
 import Solicitacoes from './pages/solicitacoes';
+import Ajuda from './pages/ajuda';
 import Erro from './pages/erro';
 import Login from './pages/login';
 import UserContext from './contexts/UserContext';
@@ -28,6 +29,7 @@ export default function App() {
             <Route path="/pagamento" element={<Pagamento />} />
             <Route path="/solicitacoes" element={<Solicitacoes />} />
             <Route path="/solicitar" element={<Solicitar />} />
+            <Route path="/ajuda" element={<Ajuda />} />
           </Route>
         </>
 

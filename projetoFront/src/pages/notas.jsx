@@ -1,84 +1,89 @@
 import './css/tabelas.css';
-export default function notas(){
-    return(
+import './css/solicitacoes.css';
+export default function notas() {
+    function calculoMedia(a, b) {
+        return (a + b) / 2;
+    }
+    return (
         <>
-        <section className='ContainerSection'>
-        <h1>Notas</h1>
-            <div className='tabela'>
-            <table>
-                    <tr>
-                    <th>Disciplina</th>
-                    <th>A1</th>
-                    <th>A2</th>
-                    <th>Menção</th>
-                    <th>Situação</th>                    
-                </tr>
-                <tr>
-                    <td>Manutenção de Software</td> 
-                    <td>9,3</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>                    
-                </tr>
-                <tr>
-                    <td>Projeto Integrado</td> 
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>                    
-                </tr>
-                <tr>
-                    <td>Banco de dados</td> 
-                    <td>9,8</td>
-                    <td>10</td>
-                    <td>SS</td>
-                    <td>Aprovado</td>                    
-                </tr>
-                <tr>
-                    <td>Levantamento de Requisitos</td> 
-                    <td>7,0</td>
-                    <td>9,0</td>
-                    <td>MS</td>
-                    <td>Aprovado</td>                    
-                </tr>    
-                <tr>
-                    <td>Lógica da Programação</td> 
-                    <td>4,0</td>
-                    <td>5,7</td>
-                    <td>MM</td>
-                    <td>Aprovado</td>                    
-                </tr>  
-                <tr>
-                    <td>Tópicos de Matemática</td> 
-                    <td>3,8</td>
-                    <td>4,2</td>
-                    <td>MI</td>
-                    <td>Reprovado</td>                    
-                </tr> 
-                <tr>
-                    <td>Fundamentos de Lógica</td> 
-                    <td>5,0</td>
-                    <td>5,0</td>
-                    <td>MI</td>
-                    <td>Aprovado</td>                    
-                </tr>
-                <tr>
-                    <td>Projeto de Interface</td> 
-                    <td>7,9</td>
-                    <td>10</td>
-                    <td>SS</td>
-                    <td>Aprovado</td>                    
-                </tr>
-                <tr>
-                    <td>Arquitetura de Computadores</td> 
-                    <td>2,0</td>
-                    <td>4,5</td>
-                    <td>MI</td>
-                    <td>Reprovado</td>                    
-                </tr>
-            </table> 
-            </div>
-        </section>
+            <section className='ContainerSection'>
+                <h1>Notas</h1>
+                <div className='tabela'>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>Disciplina</th>
+                                <th>A1</th>
+                                <th>A2</th>
+                                <th>Média</th>
+                                <th>Faltas</th>
+                                <th>Situação</th>
+                            </tr>
+                            <tr>
+                                <td className='disciplina-left'>Business Intelligence e Data Warehousing</td>
+                                <td>9.1</td>
+                                <td>3.7</td>
+                                <td>{calculoMedia(9.1, 3.7)}</td> 
+                                <td>6</td>
+
+
+
+                                
+                                <td><div className='deferido'>Aprovado</div></td>
+                            </tr>
+                            <tr>
+                                <td className='disciplina-left'>Construção de Frontend</td>
+                                <td>1.0</td>
+                                <td></td>
+                                <td></td> 
+                                <td>12</td>
+                                <td><div className='matriculado'> Matriculado</div></td>
+                            </tr>
+                            <tr>
+                                <td className='disciplina-left'>Direitos Humanos e Ambientais</td>
+                                <td>8.5</td>
+                                <td>9.32</td>
+                                <td>{calculoMedia(8.5, 9.32)}</td> 
+                                <td>0</td>
+                                <td><div className='deferido'>Aprovado</div></td>
+                            </tr>
+                            <tr>
+                                <td className='disciplina-left'>Governança de TI</td>
+                                <td>8.8</td>
+                                <td>7.0</td>
+                                <td>{calculoMedia(8.8, 7)}</td> 
+                                <td>3</td>
+                                <td><div className='deferido'>Aprovado</div></td>
+                            </tr>
+                            <tr>
+                                <td className='disciplina-left'>Manutenção de Software e DevOps</td>
+                                <td>8.8</td>
+                                <td>9.9</td>
+                                <td>{calculoMedia(8.8, 9.8)}</td> 
+                                <td>9</td>
+                                <td><div className='deferido'>Aprovado</div></td>
+                            </tr>
+                            <tr>
+                                <td className='disciplina-left'>Projeto Integrado - Frontend</td>
+                                <td>3.0</td>
+                                <td>10.0</td>
+                                <td>{calculoMedia(3, 10)}</td> 
+                                <td>2</td>
+                                <td><div className='deferido'>Aprovado</div></td>
+                            </tr>
+
+                            <tr>
+                                <td className='disciplina-left'>Tópicos de Matemática</td>
+                                <td>4.2</td>
+                                <td>3.7</td>
+                                <td>{calculoMedia(4.2, 3.7)}</td> 
+                                <td>15</td>
+                                <td><div className='indeferido'>Reprovado</div></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
         </>
     )
 }

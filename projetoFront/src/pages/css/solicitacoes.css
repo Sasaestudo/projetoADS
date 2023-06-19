@@ -1,29 +1,31 @@
-.page{
-   margin-top: 20px;
-   width: 500px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+.page {
+    margin-top: 20px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.backdrop{
+
+.backdrop {
     margin-top: 0px;
     width: 100vw;
     height: 100vh;
     top: 0;
     left: 0;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0, 0, 0, 0.7);
     position: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.modalClose{
+
+.modalClose {
     cursor: pointer;
     margin: 5px;
     padding: 3px;
 }
 
-.modal{
+.modal {
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
@@ -32,3 +34,33 @@
     border-radius: 8px;
 }
 
+.deferido {
+    width: 90px;
+    color: white;
+    background-color: #2ada53;
+    border-radius: 4px;
+    height: 25px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.tabela-centralizar {
+    display: flex;
+    justify-content: center;
+   
+}
+
+.indeferido {
+    width: 90px;
+    color: white;
+    background-color: red;
+    border-radius: 4px;
+    height: 25px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
