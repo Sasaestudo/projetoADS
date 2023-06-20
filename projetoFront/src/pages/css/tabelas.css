@@ -33,3 +33,23 @@
   color: #e72c0f;;
   cursor: pointer;
 }
+
+.disciplina-left {
+  text-align: left;
+}
+
+.dia-left {
+  text-align: left;
+}
+
+.matriculado {
+    width: 90px;
+    color: white;
+    background-color: #9a9a9a;
+    border-radius: 4px;
+    height: 25px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

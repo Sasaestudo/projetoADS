@@ -14,54 +14,61 @@ export default function solicitacoes() {
   return (
     <>
 
-<section className='ContainerSection'>
-      <h1>Historico de Solicitações</h1>
-      <div className='tabela'>
-        <table>
-        <tbody>
-          <tr>
-            <th>Departamento</th>
-            <th>Solicitação</th>
-            <th>Status</th>
-          </tr>
-          <tr>
-            <td>Financeiro</td>
-            <td>Meu desconto de matrícula não apareceu no boleto.</td>
-            <td>V (icone deferido)</td>
-          </tr>
-          <tr>
-            <td>Secretaria Acadêmica</td>
-            <td>Gostaria de ir para a turma 3ADS2</td>
-            <td>X (icone indeferido)</td>
-          </tr>
-          {meusPedidos.map((pedido, index) => (
-            <tr key={index}>
-              <td>{pedido.nome}</td>
-              <td>{pedido.msg}</td>
-              <td novaSolicitacao>
-                <img src={ampulheta} alt="status" width="20px" />
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-</div>
-      <div className="page">
-        <Modal isOpen={modalOpen} setIsOpen={setModalOpen}>
-          {' '}
-          {/* ele mesmo define se vai se renderizar ou não, permite seja fechado por ele mesmo(dentro dele)*/}
-          <div>
-            <Solicitar setModalOpen={setModalOpen}/>
-          </div>
-        </Modal>
-        <div>
-          <button className="incluir" onClick={() => { setModalOpen(true)}}
-          >
-            Incluir
-          </button>
+      <section className='ContainerSection'>
+        <h1>Historico de Solicitações</h1>
+        <div className='tabela'>
+          <table>
+            <tbody>
+              <tr>
+                <th>Departamento</th>
+                <th>Solicitação</th>
+                <th>Status</th>
+              </tr>
+              <tr>
+                <td>Financeiro</td>
+                <td>Meu desconto de matrícula não apareceu no boleto.</td>
+                <td className='tabela-centralizar'>
+                  <div className='deferido'>Deferido</div>
+
+
+
+                </td>
+              </tr>
+              <tr>
+                <td>Secretaria Acadêmica</td>
+                <td>Gostaria de ir para a turma 3ADS2</td>
+                <td className='tabela-centralizar'>
+                  <div className='indeferido'>Indeferido</div>
+                </td>
+              </tr>
+              {meusPedidos.map((pedido, index) => (
+                <tr key={index}>
+                  <td>{pedido.nome}</td>
+                  <td>{pedido.msg}</td>
+                  <td novaSolicitacao>
+                    <img src={ampulheta} alt="status" width="20px" />
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
-      </div>
-</section>
+        <div className="page">
+          <Modal isOpen={modalOpen} setIsOpen={setModalOpen}>
+            {' '}
+            {/* ele mesmo define se vai se renderizar ou não, permite seja fechado por ele mesmo(dentro dele)*/}
+            <div>
+              <Solicitar setModalOpen={setModalOpen} />
+            </div>
+          </Modal>
+          <div>
+            <button className="incluir" onClick={() => { setModalOpen(true) }}
+            >
+              Incluir
+            </button>
+          </div>
+        </div>
+      </section>
     </>
   );
 
