@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
 import UserContext from '../contexts/UserContext'
 
+
 export default function LoginForm(props) {
   const { register, handleSubmit, formState: { errors } } = useForm()
   const navigate = useNavigate()
@@ -57,6 +58,7 @@ export default function LoginForm(props) {
         {errors.senha && <p className="erro">{errors.senha.message}</p>}
       </div>
       <button>Entrar</button>
+      <a onClick={() => {navigate("/recuperaSenha")}}>Recuperar senha </a>
     </form>
-  )
+  ) 
 }

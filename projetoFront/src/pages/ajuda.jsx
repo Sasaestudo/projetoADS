@@ -2,7 +2,7 @@ import '../pages/css/ajuda.css'
 export default function ajuda(){
   return(
     
-    <section ContainerSectio>
+    <section className='ContainerSection'>
         <div className='ajuda'>
         <h1>Perguntas Frequentes</h1>
             <dl>

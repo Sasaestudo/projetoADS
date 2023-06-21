@@ -12,6 +12,7 @@ import Ajuda from './pages/ajuda';
 import Erro from './pages/erro';
 import Login from './pages/login';
 import UserContext from './contexts/UserContext';
+import RecuperaSenha from './pages/recuperaSenha';
 import { useContext } from 'react';
 
 
@@ -34,6 +35,7 @@ export default function App() {
         </>
 
         <Route path="/" element={<Login />} />
+        <Route path="/recuperaSenha" element={<RecuperaSenha />} />
 
         <Route path="*" element={<Erro />} />
       </Routes>

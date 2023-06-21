@@ -1,7 +1,8 @@
 import { createContext, useState } from 'react'
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'  //firebase autenticação
+import { getStorage } from "firebase/storage";  //CloudStorage do Firebase
+import { getDatabase } from "firebase/database";  // Base se dados
 
 //Dados de validação Firebase
 const firebaseConfig = {
@@ -15,8 +16,10 @@ const firebaseConfig = {
   };
 
   // inicializa Firebase
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
+const app = initializeApp(firebaseConfig); // Firebase
+const auth = getAuth(app); // Autenticação
+const storage = getStorage(app);  //Firebase Storage
+const database = getDatabase(app); // base de dados
 
 
 const UserContext = createContext({
@@ -53,6 +56,9 @@ export function UserContextProvider(props) {
     handleLogout: logout,
   }
 
+
+
+  
   return (
     <UserContext.Provider value={contexto}>
       {props.children}
