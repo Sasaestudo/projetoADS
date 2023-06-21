@@ -62,8 +62,7 @@ export default function solicitacoes() {
             </div>
           </Modal>
           <div>
-            <button className="incluir" onClick={() => { setModalOpen(true) }}
-            >
+            <button className="incluir" onClick={() => { setModalOpen(true) }}>
               Incluir
             </button>
           </div>

@@ -61,6 +61,7 @@
     padding: 5px 0;
     margin: 0 0 15px 0 ;
     width: 100%;
+   
     }
 
     .form-login input{
@@ -69,6 +70,7 @@
     
     .form-login input:focus-visible{
     border-bottom: 2px solid  #c06f0b;
+    background-color: #dfdddd;
   }
 
   p.erro{
@@ -85,6 +87,30 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 0.8em;
+    padding: 5px 0;
+    margin:15px 0px;
+    color: #2e2e2e;
+  }
+
+  .containerLogin a{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.7em;
+    padding: 5px 0;
+    margin:15px 0px;
+    color: #2e2e2e;
+    cursor: pointer;
+  }
+
+  .containerLogin a:hover{
+    text-decoration: underline;
+    font-style: italic;
+  }
+
+  .containerLogin p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.7em;
     padding: 5px 0;
     margin:15px 0px;
     color: #2e2e2e;
