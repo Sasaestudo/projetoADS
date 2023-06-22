@@ -20,7 +20,7 @@ export default function notas() {
                                 <th>Situação</th>
                             </tr>
                             <tr>
-                                <td className='disciplina-left'>Business Intelligence e Data Warehousing</td>
+                                <td className='txtEsq'>Business Intelligence e Data Warehousing</td>
                                 <td>9.1</td>
                                 <td>3.7</td>
                                 <td>{calculoMedia(9.1, 3.7)}</td> 
@@ -32,7 +32,7 @@ export default function notas() {
                                 <td><div className='deferido'>Aprovado</div></td>
                             </tr>
                             <tr>
-                                <td className='disciplina-left'>Construção de Frontend</td>
+                                <td className='txtEsq'>Construção de Frontend</td>
                                 <td>1.0</td>
                                 <td></td>
                                 <td></td> 
@@ -40,7 +40,7 @@ export default function notas() {
                                 <td><div className='matriculado'> Matriculado</div></td>
                             </tr>
                             <tr>
-                                <td className='disciplina-left'>Direitos Humanos e Ambientais</td>
+                                <td className='txtEsq'>Direitos Humanos e Ambientais</td>
                                 <td>8.5</td>
                                 <td>9.32</td>
                                 <td>{calculoMedia(8.5, 9.32)}</td> 
@@ -48,7 +48,7 @@ export default function notas() {
                                 <td><div className='deferido'>Aprovado</div></td>
                             </tr>
                             <tr>
-                                <td className='disciplina-left'>Governança de TI</td>
+                                <td className='txtEsq'>Governança de TI</td>
                                 <td>8.8</td>
                                 <td>7.0</td>
                                 <td>{calculoMedia(8.8, 7)}</td> 
@@ -56,7 +56,7 @@ export default function notas() {
                                 <td><div className='deferido'>Aprovado</div></td>
                             </tr>
                             <tr>
-                                <td className='disciplina-left'>Manutenção de Software e DevOps</td>
+                                <td className='txtEsq'>Manutenção de Software e DevOps</td>
                                 <td>8.8</td>
                                 <td>9.9</td>
                                 <td>{calculoMedia(8.8, 9.8)}</td> 
@@ -64,7 +64,7 @@ export default function notas() {
                                 <td><div className='deferido'>Aprovado</div></td>
                             </tr>
                             <tr>
-                                <td className='disciplina-left'>Projeto Integrado - Frontend</td>
+                                <td className='txtEsq'>Projeto Integrado - Frontend</td>
                                 <td>3.0</td>
                                 <td>10.0</td>
                                 <td>{calculoMedia(3, 10)}</td> 
@@ -73,7 +73,7 @@ export default function notas() {
                             </tr>
 
                             <tr>
-                                <td className='disciplina-left'>Tópicos de Matemática</td>
+                                <td className='txtEsq'>Tópicos de Matemática</td>
                                 <td>4.2</td>
                                 <td>3.7</td>
                                 <td>{calculoMedia(4.2, 3.7)}</td> 
