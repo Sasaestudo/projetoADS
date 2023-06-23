@@ -50,17 +50,18 @@ const Home = () => {
 
   return (
     <div>
-      <div style={{ height: '500px' }}>
+      <div style={{ height: '50vh', width: '70%', margin:'auto'}}>
         <Calendar localizer={localizer} events={events} selectable onSelectSlot={handleSelectSlot} />
       </div>
       {selectedSlot && (
-        <div>
+        <div style={{ height: '13vh', width: '30%', margin:'auto', border:'1px solid #d3d3d3',  }}>
           <input className='entrada'
                  type="text"
                  value={eventTitle}
                  onChange={handleEventTitleChange}
                  placeholder="Título do evento"
           />
+          <div style={{fontSize:'20px', color:'black', background:'d3d3d3'}}>
           <TimePicker
                  value={eventTime}
                  onChange={handleEventTimeChange}
@@ -68,6 +69,8 @@ const Home = () => {
                  disableClock={true}
                  
           />
+          </div>
+          
           <button onClick={handleAddEvent}>Adicionar evento</button>
         </div>
       )}

@@ -25,8 +25,8 @@ export default function solicitacoes() {
                 <th>Status</th>
               </tr>
               <tr>
-                <td>Financeiro</td>
-                <td>Meu desconto de matrícula não apareceu no boleto.</td>
+                <td className='txtEsq'>Financeiro</td>
+                <td className='txtEsq'>Meu desconto de matrícula não apareceu no boleto.</td>
                 <td className='tabela-centralizar'>
                   <div className='deferido'>Deferido</div>
 
@@ -35,16 +35,16 @@ export default function solicitacoes() {
                 </td>
               </tr>
               <tr>
-                <td>Secretaria Acadêmica</td>
-                <td>Gostaria de ir para a turma 3ADS2</td>
+                <td className='txtEsq'>Secretaria Acadêmica</td>
+                <td className='txtEsq'>Gostaria de ir para a turma 3ADS2</td>
                 <td className='tabela-centralizar'>
                   <div className='indeferido'>Indeferido</div>
                 </td>
               </tr>
               {meusPedidos.map((pedido, index) => (
                 <tr key={index}>
-                  <td>{pedido.nome}</td>
-                  <td>{pedido.msg}</td>
+                  <td className='txtEsq'>{pedido.nome}</td>
+                  <td className='txtEsq'>{pedido.msg}</td>
                   <td novaSolicitacao>
                     <img src={ampulheta} alt="status" width="20px" />
                   </td>
