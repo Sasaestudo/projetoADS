@@ -3,14 +3,13 @@ import { useForm } from 'react-hook-form'
 import { useContext, useState } from 'react'
 import UserContext from '../contexts/UserContext'
 import './css/login.css'
-import { auth, sendEmailVerification, sendPasswordResetEmail } from 'firebase/auth'
 
 
 export default function recuperaSenha(props) {
     const { register, handleSubmit, formState: { errors } } = useForm()
     const navigate = useNavigate()
     const { handleResetPass } = useContext(UserContext)
-    const [error, sendEmailVerification ] = useState("")
+    const [error] = useState("")
 
     const validaEmail = {
         required: {
@@ -25,10 +24,8 @@ export default function recuperaSenha(props) {
 
     async function onSubmit(data) { //chama o handle reser , tbm deve ser assincrono
         const { email } = data;
-        firebase.auth().sendPasswordResetEmail(data)
         try {
-          handleResetPass(data)
-          sendEmailVerification(data)
+          await handleResetPass(data)
           navigate("/") // url de direcionamento para login após reset de senha com sucesso
         }catch (error) {
        (error.message)

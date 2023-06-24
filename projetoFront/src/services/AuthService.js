@@ -1,7 +1,7 @@
 // TODO: implementar integracao com Firebase/
 // Apenas consulta ao backend. Somente retorno se erro ou sucesso
 
-import{ getAuth, signInWithEmailAndPassword, signOut } from 'firebase/auth';
+import{ getAuth, signInWithEmailAndPassword, sendPasswordResetEmail, signOut } from 'firebase/auth';
 import { app } from './FirebaseConfig'
 
 const auth = getAuth(app) // função de autenticação do Firebase
@@ -18,9 +18,18 @@ export async function login (email, senha) { //função assincrona para aguardar
             throw Error ('Usuário não encontrado!') //mensagem amigável para o usuário
         }
         }) 
-
 }
 
 export async function logout () {
     signOut(auth) //chama a função signout do Firebase
+}
+
+export async function resetPassword(email){
+    await sendPasswordResetEmail(auth, email)
+    .then(() => {
+        confirmPasswordReset(email)
+        return message ('Verifique seu e-mail')})
+    .catch((error) => {
+        throw Error ('Erro ao enviar email. Motivo: ' + error.message)
+    });
 }

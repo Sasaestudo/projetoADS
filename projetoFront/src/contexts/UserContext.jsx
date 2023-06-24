@@ -1,25 +1,6 @@
+import { sendPasswordResetEmail } from 'firebase/auth';
 import { createContext, useState } from 'react'
-import { initializeApp } from "firebase/app";
-import { getAuth, signInWithEmailAndPassword, sendPasswordResetEmail, sendEmailVerification } from 'firebase/auth'  //firebase autenticação
-import { getStorage } from "firebase/storage";  //CloudStorage do Firebase
-import { getDatabase } from "firebase/database";  // Base se dados
-
-//Dados de validação Firebase
-const firebaseConfig = {
-    apiKey: "AIzaSyB1LVqhWvAIhOcBksi2iVjSQXPXFMQLkr8",
-    authDomain: "facit-d638d.firebaseapp.com",
-    projectId: "facit-d638d",
-    storageBucket: "facit-d638d.appspot.com",
-    messagingSenderId: "638908525049",
-    appId: "1:638908525049:web:fb58e8e2ee3113b679f528",
-    measurementId: "G-4TWG4HJH99"
-  };
-
-  // inicializa Firebase
-const app = initializeApp(firebaseConfig); // Firebase
-const auth = getAuth(app); // Autenticação
-const storage = getStorage(app);  //Firebase Storage
-const database = getDatabase(app); // base de dados
+import { resetPassword } from '../services/AuthService';
 
 
 const UserContext = createContext({
@@ -50,16 +31,9 @@ export function UserContextProvider(props) {
     setCurrentUser({ userID: null, logado: false })
   }
 
-  async function esqueciSenha(email) {
-    const code = {userID: userCredential.user.email,}
-    await sendPasswordResetEmail(auth, email)
-    .then(() => {
-      sendEmailVerification(email)
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-    });
+  async function esqueciSenha( {email} ) {
+    await resetPassword(email)
+    .catch((error) => console.log(error.message)) 
   
   }
 
@@ -71,9 +45,6 @@ export function UserContextProvider(props) {
     handleResetPass: esqueciSenha, 
   }
 
-
-
-  
   return (
     <UserContext.Provider value={contexto}>
       {props.children}
