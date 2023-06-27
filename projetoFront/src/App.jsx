@@ -3,7 +3,7 @@ import '../src/pages/css/App.css';
 import Layout from './components/layout';
 import Home from './pages/home';
 import Notas from './pages/notas';
-import Grade from './pages/grade';
+import GradeDisciplina from './pages/grade';
 import Financeiro from './pages/financeiro';
 import Pagamento from './pages/pagamento';
 import Solicitar from './pages/solicitar';
@@ -20,23 +20,21 @@ export default function App() {
   const { logado } = useContext(UserContext);
   return (
     <BrowserRouter>
-      <Routes>
-        <>
-          <Route element={<Layout />}>
+          <Routes>
+        <>   <Route element={<Layout />}>
             <Route path="/home" element={<Home />} />
             <Route path="/notas" element={<Notas />} />
-            <Route path="/grade" element={<Grade />} />
+            <Route path="/grade" element={<GradeDisciplina />} />
             <Route path="/financeiro" element={<Financeiro />} />
             <Route path="/pagamento" element={<Pagamento />} />
             <Route path="/solicitacoes" element={<Solicitacoes />} />
             <Route path="/solicitar" element={<Solicitar />} />
             <Route path="/ajuda" element={<Ajuda />} />
           </Route>
-        </>
-
+          </>
         <Route path="/" element={<Login />} />
         <Route path="/recuperaSenha" element={<RecuperaSenha />} />
-
+        
         <Route path="*" element={<Erro />} />
       </Routes>
     </BrowserRouter>
