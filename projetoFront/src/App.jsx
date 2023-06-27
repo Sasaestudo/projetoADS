@@ -3,6 +3,7 @@ import '../src/pages/css/App.css';
 import Layout from './components/layout';
 import Home from './pages/home';
 import Notas from './pages/notas';
+import NotasCadastrar from './pages/notasCadastrar';
 import Grade from './pages/grade';
 import Financeiro from './pages/financeiro';
 import Pagamento from './pages/pagamento';
@@ -25,6 +26,7 @@ export default function App() {
           <Route element={<Layout />}>
             <Route path="/home" element={<Home />} />
             <Route path="/notas" element={<Notas />} />
+            <Route path="/notasCadastrar" element={<NotasCadastrar />} />
             <Route path="/grade" element={<Grade />} />
             <Route path="/financeiro" element={<Financeiro />} />
             <Route path="/pagamento" element={<Pagamento />} />

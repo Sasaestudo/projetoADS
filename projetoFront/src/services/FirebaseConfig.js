@@ -1,18 +1,18 @@
-
 import { initializeApp } from "firebase/app";
+import { getDatabase } from "firebase/database";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB1LVqhWvAIhOcBksi2iVjSQXPXFMQLkr8",
-  authDomain: "facit-d638d.firebaseapp.com",
-  databaseURL: "https://facit-d638d-default-rtdb.firebaseio.com",
-  projectId: "facit-d638d",
-  storageBucket: "facit-d638d.appspot.com",
-  messagingSenderId: "638908525049",
-  appId: "1:638908525049:web:fb58e8e2ee3113b679f528",
-  measurementId: "G-4TWG4HJH99"
+  apiKey: "AIzaSyB3pCDDblChVY063HPTOazwJOQ1mWCV4Jk",
+  authDomain: "facit-d1265.firebaseapp.com",
+  projectId: "facit-d1265",
+  storageBucket: "facit-d1265.appspot.com",
+  messagingSenderId: "339797683610",
+  appId: "1:339797683610:web:c6c3c8b5c26657df469e23"
 };
 
-  // inicializa Firebase
-  const app = initializeApp(firebaseConfig); // Firebase
 
-  export { app }
+const app = initializeApp(firebaseConfig);
+const fireDb = getDatabase(app);
+const urlApi = "https://facit-d1265-default-rtdb.firebaseio.com/json";
+
+export { app, fireDb, urlApi };
