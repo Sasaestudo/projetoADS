@@ -1,89 +1,91 @@
 import './css/tabelas.css';
-import './css/solicitacoes.css';
-export default function notas() {
-    function calculoMedia(a, b) {
-        return (a + b) / 2;
+import React, { useState, useEffect } from 'react';
+import NotasCadastrar from './notasCadastrar';
+import { getDatabase, onValue, ref, push } from 'firebase/database';
+
+const Notas = () => {
+  const [notasAluno, setNotasAluno] = useState({});
+
+  useEffect(() => {
+    const db = getDatabase();
+    const dbRef = ref(db, 'notas');
+    onValue(dbRef, (snapshot) => {
+      const data = snapshot.val();
+      if (data != null) {
+        setNotasAluno(data);
+      }
+    });
+  }, []);
+
+  const addEdit = (obj) => {
+    const db = getDatabase();
+    const dbRef = ref(db, 'notas');
+    push(dbRef, obj, (error) => {
+      if (error) {
+        console.log('error');
+      }
+    });
+  };
+
+  const calculoMedia = (a1, a2) => {
+    const notaA1 = parseFloat(a1);
+    const notaA2 = parseFloat(a2);
+    const media = (notaA1 + notaA2) / 2;
+    return media.toFixed(1); // Arredonda para uma casa decimal
+  };
+
+  const calculoSituacao = (a1, a2, faltas) => {
+    const notaA1 = parseFloat(a1);
+    const notaA2 = parseFloat(a2);
+    const media = (notaA1 + notaA2) / 2;
+    if (media >= 5 && faltas <= 10) {
+      return 'Aprovado';
+    } else {
+      return 'Reprovado';
     }
-    return (
-        <>
-            <section className='ContainerSection'>
-                <h1>Notas</h1>
-                <div className='tabela'>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <th>Disciplina</th>
-                                <th>A1</th>
-                                <th>A2</th>
-                                <th>Média</th>
-                                <th>Faltas</th>
-                                <th>Situação</th>
-                            </tr>
-                            <tr>
-                                <td className='txtEsq'>Business Intelligence e Data Warehousing</td>
-                                <td>9.1</td>
-                                <td>3.7</td>
-                                <td>{calculoMedia(9.1, 3.7)}</td> 
-                                <td>6</td>
+  };
 
+  return (
+    <>
+    
+    <section className='ContainerSection'> 
+    <h1>Notas</h1>
+      <div className='tabela'>
+          <table>
+            <thead>
+              <tr>
+                <th>Disciplina</th>
+                <th>A1</th>
+                <th>A2</th>
+                <th>Média</th>
+                <th>Faltas</th>
+                <th>Situação</th>
+              </tr>
+            </thead>
+            <tbody>
+              {Object.keys(notasAluno).map((id) => {
+                const disciplina = notasAluno[id];
+                return (
+                  <tr key={id}>
+                    <td className='txtEsq'>{disciplina.nome}</td>
+                    <td>{disciplina.a1}</td>
+                    <td>{disciplina.a2}</td>
+                    <td>{calculoMedia(disciplina.a1, disciplina.a2)}</td>
+                    <td>{disciplina.faltas}</td>
+                    <td>{calculoSituacao(disciplina.a1, disciplina.a2, disciplina.faltas)}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      <div className='formulario'>
+        <h1>Dados</h1>
+        <NotasCadastrar addEdit={addEdit} />
+      </div>
+      </section>
+    </>
+  );
+};
 
-
-                                
-                                <td><div className='deferido'>Aprovado</div></td>
-                            </tr>
-                            <tr>
-                                <td className='txtEsq'>Construção de Frontend</td>
-                                <td>1.0</td>
-                                <td></td>
-                                <td></td> 
-                                <td>12</td>
-                                <td><div className='matriculado'> Matriculado</div></td>
-                            </tr>
-                            <tr>
-                                <td className='txtEsq'>Direitos Humanos e Ambientais</td>
-                                <td>8.5</td>
-                                <td>9.32</td>
-                                <td>{calculoMedia(8.5, 9.32)}</td> 
-                                <td>0</td>
-                                <td><div className='deferido'>Aprovado</div></td>
-                            </tr>
-                            <tr>
-                                <td className='txtEsq'>Governança de TI</td>
-                                <td>8.8</td>
-                                <td>7.0</td>
-                                <td>{calculoMedia(8.8, 7)}</td> 
-                                <td>3</td>
-                                <td><div className='deferido'>Aprovado</div></td>
-                            </tr>
-                            <tr>
-                                <td className='txtEsq'>Manutenção de Software e DevOps</td>
-                                <td>8.8</td>
-                                <td>9.9</td>
-                                <td>{calculoMedia(8.8, 9.8)}</td> 
-                                <td>9</td>
-                                <td><div className='deferido'>Aprovado</div></td>
-                            </tr>
-                            <tr>
-                                <td className='txtEsq'>Projeto Integrado - Frontend</td>
-                                <td>3.0</td>
-                                <td>10.0</td>
-                                <td>{calculoMedia(3, 10)}</td> 
-                                <td>2</td>
-                                <td><div className='deferido'>Aprovado</div></td>
-                            </tr>
-
-                            <tr>
-                                <td className='txtEsq'>Tópicos de Matemática</td>
-                                <td>4.2</td>
-                                <td>3.7</td>
-                                <td>{calculoMedia(4.2, 3.7)}</td> 
-                                <td>15</td>
-                                <td><div className='indeferido'>Reprovado</div></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
-        </>
-    )
-}
+export default Notas;

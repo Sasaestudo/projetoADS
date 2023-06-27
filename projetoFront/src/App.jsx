@@ -4,6 +4,7 @@ import Layout from './components/layout';
 import Home from './pages/home';
 import Notas from './pages/notas';
 import GradeDisciplina from './pages/grade';
+import NotasCadastrar from './pages/notasCadastrar';
 import Financeiro from './pages/financeiro';
 import Pagamento from './pages/pagamento';
 import Solicitar from './pages/solicitar';
@@ -25,6 +26,7 @@ export default function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/notas" element={<Notas />} />
             <Route path="/grade" element={<GradeDisciplina />} />
+            <Route path="/notasCadastrar" element={<NotasCadastrar />} />
             <Route path="/financeiro" element={<Financeiro />} />
             <Route path="/pagamento" element={<Pagamento />} />
             <Route path="/solicitacoes" element={<Solicitacoes />} />
