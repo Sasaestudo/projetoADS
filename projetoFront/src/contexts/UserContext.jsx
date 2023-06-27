@@ -1,4 +1,4 @@
-import { sendPasswordResetEmail } from 'firebase/auth';
+import { signInWithEmailAndPassword} from 'firebase/auth';
 import { createContext, useState } from 'react'
 import { resetPassword } from '../services/AuthService';
 
@@ -16,7 +16,7 @@ export function UserContextProvider(props) {
   const [currentUser, setCurrentUser] = useState({ userID: null, logado: false })
   async function login(email, senha) { //'async' pra sinalizar função assíncrona, devido à necessidade de aguardar retorno de backend
     let response = false
-    await signInWithEmailAndPassword(auth, email, senha) //'await' pra função esperar resposta com a validação do backend
+    await signInWithEmailAndPassword(email, senha) //'await' pra função esperar resposta com a validação do backend
     .then(() => { //se der certo
       setCurrentUser({ userID: userCredential.user.id, logado: true })
       response = true
