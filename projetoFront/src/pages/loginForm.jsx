@@ -36,7 +36,7 @@ export default function LoginForm(props) {
     const { email, senha } = data;
     setErrorLogin("") //estado do formulario para retorno de erro
     try {
-      handleLogin(email, senha)
+      await handleLogin(email, senha)
       navigate("/home") //url de direcionamento após login com sucesso
     }catch (error) {
       setErrorLogin(error.message)

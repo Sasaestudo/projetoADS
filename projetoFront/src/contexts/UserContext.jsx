@@ -1,6 +1,6 @@
-import { signInWithEmailAndPassword} from 'firebase/auth';
+
 import { createContext, useState } from 'react'
-import { resetPassword } from '../services/AuthService';
+import { login, logout, resetPassword } from '../services/AuthService';
 
 
 const UserContext = createContext({
@@ -13,22 +13,21 @@ const UserContext = createContext({
 
 
 export function UserContextProvider(props) {
-  const [currentUser, setCurrentUser] = useState({ userID: null, logado: false })
-  async function login(email, senha) { //'async' pra sinalizar função assíncrona, devido à necessidade de aguardar retorno de backend
-    let response = false
-    await signInWithEmailAndPassword(email, senha) //'await' pra função esperar resposta com a validação do backend
-    .then(() => { //se der certo
-      setCurrentUser({ userID: userCredential.user.id, logado: true })
-      response = true
-    })
-    .catch((error) => console.log(error.message)) //se der erro
-    response = true
-  return response
+
+  const [currentUser, setCurrentUser] = useState({ userId: null, logado: true })
+
+  async function handleLogin(email, senha) { //tudo o que estiver relacionado a uma função originalmente assincrona deverá ser tbm assincrona
+    try { //se correto
+    const id = await login(email, senha) //chama a função login e retorna id do usuario, se ok
+    setCurrentUser({ userId: id, logado: true }) //guarda id no contexto
+    } catch (error) { //se erro
+      throw Error(error.message) //devolve mensagem de erro
+    }
   }
 
-
-  function logout() {
-    setCurrentUser({ userID: null, logado: false })
+  async function handleLogout() {
+    await logout() 
+    setCurrentUser({ userId: null, logado: false })
   }
 
   async function esqueciSenha( {email} ) {
@@ -38,10 +37,10 @@ export function UserContextProvider(props) {
   }
 
   const contexto = {
-    userID: currentUser.userID,
+    userId: currentUser.userId,
     logado: currentUser.logado,
-    handleLogin: login,
-    handleLogout: logout,
+    handleLogin,
+    handleLogout,
     handleResetPass: esqueciSenha, 
   }
 

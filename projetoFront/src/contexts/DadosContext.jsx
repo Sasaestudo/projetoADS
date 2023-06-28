@@ -3,17 +3,18 @@ import { listaGrade, insereGrade } from "../services/TableService";
 
 const DadosContext = createContext({
     grade: [], // tarefas
-    listaGrade: () => { }, //listaTarefas
+    listaGrade: (userId) => { }, //listaTarefas
     insereGrade: () => { },
 })
 
 export function DadosContextProvider(props) {
     const [minhaGrade, setMinhaGrade] = useState([])
 
-    async function listar() {
+    async function listar(userId) {
         try {
           const data = await listaGrade()
-          setMinhaGrade(data)
+          console.log(data)
+          setMinhaGrade(data.filter((item) => item.userId === userId))
         } catch (error) {
           throw Error(error.message)
         }

@@ -21,7 +21,9 @@ export default function App() {
   const { logado } = useContext(UserContext);
   return (
     <BrowserRouter>
+     
           <Routes>
+          { logado ?
         <>   <Route element={<Layout />}>
             <Route path="/home" element={<Home />} />
             <Route path="/notas" element={<Notas />} />
@@ -34,9 +36,11 @@ export default function App() {
             <Route path="/ajuda" element={<Ajuda />} />
           </Route>
           </>
-        <Route path="/" element={<Login />} />
-        <Route path="/recuperaSenha" element={<RecuperaSenha />} />
-        
+          :
+          <>
+        <Route path="/" element={<Login />} /> 
+        <Route path="/recuperaSenha" element={<RecuperaSenha />} /></>
+          }
         <Route path="*" element={<Erro />} />
       </Routes>
     </BrowserRouter>
