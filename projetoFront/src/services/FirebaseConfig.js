@@ -14,6 +14,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const fireDb = getDatabase(app);
 const urlApi = "https://facit-d1265-default-rtdb.firebaseio.com/json";
+const Urltabela = "https://facit-d1265-default-rtdb.firebaseio.com/"
 
-export { app, fireDb, urlApi };
+export { app, fireDb, urlApi, Urltabela };
 

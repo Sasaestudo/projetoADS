@@ -79,10 +79,10 @@ const Notas = () => {
             </tbody>
           </table>
         </div>
-      <div className='formulario'>
+{/*         <div className='formulario'>
         <h1>Dados</h1>
-        <NotasCadastrar addEdit={addEdit} />
-      </div>
+        <NotasCadastrar addEdit={addEdit} /> estará disponível no peril de professor
+      </div>  */}
       </section>
     </>
   );
