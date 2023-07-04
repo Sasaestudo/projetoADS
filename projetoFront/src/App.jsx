@@ -23,6 +23,7 @@ export default function App() {
     <BrowserRouter>
      
           <Routes>
+        <Route path="/" element={<Login />} /> 
           { logado ?
         <>   <Route element={<Layout />}>
             <Route path="/home" element={<Home />} />
