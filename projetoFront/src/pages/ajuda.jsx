@@ -1,4 +1,5 @@
 import '../pages/css/ajuda.css'
+import '../components/layout.css'
 export default function ajuda(){
   return(
     
