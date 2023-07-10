@@ -28,7 +28,8 @@
     flex-direction: row;
     justify-content: space-evenly;
     width: -webkit-fill-available;
-    margin: 0 15%;
+    margin: 0 10%;
+    gap: 20px;
   }
 
   .listaMenu h3{

@@ -1,14 +1,25 @@
-import React, { useState } from 'react';
-import { Calendar, momentLocalizer } from 'react-big-calendar';
-import 'react-big-calendar/lib/css/react-big-calendar.css';
-import moment from 'moment';
-import TimePicker from 'react-time-picker';
+
+import { useContext } from 'react';
+import UserContext from '../contexts/UserContext';
+//import { Calendar, momentLocalizer } from 'react-big-calendar';
+//import 'react-big-calendar/lib/css/react-big-calendar.css';
+//import moment from 'moment';
+//import TimePicker from 'react-time-picker';
 
 
-const localizer = momentLocalizer(moment);
+// const localizer = momentLocalizer(moment);
 
 const Home = () => {
-  const [events, setEvents] = useState([]);
+  const { userId } = useContext(UserContext)
+  return(
+    <section className='ContainerSection'>
+    <h2>Bem vindo, Aluno!</h2>
+    </section>
+  )
+
+ 
+};
+ /* const [events, setEvents] = useState([]);
 
   const [selectedSlot, setSelectedSlot] = useState(null);
   const [eventTitle, setEventTitle] = useState('');
@@ -76,7 +87,7 @@ const Home = () => {
       )}
       <div>{eventComponents}</div>
     </div>
-  );
-};
+  );*/
+
 
 export default Home;

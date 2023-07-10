@@ -24,6 +24,7 @@ export default function App() {
      
           <Routes>
         <Route path="/" element={<Login />} /> 
+        <Route path="/recuperaSenha" element={<RecuperaSenha />} />
           { logado ?
         <>   <Route element={<Layout />}>
             <Route path="/home" element={<Home />} />
@@ -39,10 +40,8 @@ export default function App() {
           </>
           :
           <>
-        <Route path="/" element={<Login />} /> 
-        <Route path="/recuperaSenha" element={<RecuperaSenha />} /></>
+        <Route path="*" element={<Erro />} /></>
           }
-        <Route path="*" element={<Erro />} />
       </Routes>
     </BrowserRouter>
   );

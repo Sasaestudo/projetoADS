@@ -23,7 +23,7 @@ export default function Novo({setModalOpen}) {
       <h1>Nova Solicitação</h1>
       <form onSubmit={handleSubmit(onSubmit)} className='formSolicitar'>
         <label for="opcoes">Departamento</label>
-        <select
+        <select required='true'
           defaultValue={''}
           name="opcoes"
           {...register('nome', { required: 'Campo Obrigatório!' })}
