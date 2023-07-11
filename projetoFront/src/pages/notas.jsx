@@ -50,7 +50,7 @@ const Notas = () => {
     
     <section className='ContainerSection'> 
     <h1>Notas</h1>
-      <div className='tabela notas'>
+      <div className='tabela'>
           <table>
             <thead>
               <tr>
