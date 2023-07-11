@@ -4,6 +4,7 @@ import UserContext from '../contexts/UserContext'
 import './navbar.css';
 
 export default function Navbar() {
+  const { userId } = useContext(UserContext)
 
 const {handleLogout} = useContext(UserContext)
 
@@ -13,7 +14,7 @@ const handleSair=() => {
   // elementos do menu envolvidos dentro da tag nav. Traz h3 ue compõe o menu pra dentro do nav
   return (
     <nav className='listaMenu'> 
-    <h3>FACIT</h3>
+    <h3>FACIT {userId}</h3>
       <ul>
         <li>
           <NavLink to="/home">Home</NavLink>
