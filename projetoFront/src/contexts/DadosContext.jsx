@@ -1,20 +1,35 @@
 import { createContext, useState } from "react";
-import { listaGrade, insereGrade } from "../services/TableService";
+import { listaGrade, insereGrade, listaDados   } from "../services/TableService";
+
 
 const DadosContext = createContext({
     grade: [], // tarefas
-    listaGrade: (userId) => { }, //listaTarefas
+    dadosAluno: [],
+    listaGrade: () => { }, //listaTarefas
     insereGrade: () => { },
+    listaDados: () => {}
+
 })
 
 export function DadosContextProvider(props) {
     const [minhaGrade, setMinhaGrade] = useState([])
+    const [meusDados, setMeusDados] = useState([])
 
     async function listar(userId) {
         try {
           const data = await listaGrade()
-          console.log(data)
-          setMinhaGrade(data.filter((item) => item.userId === userId))
+        //  console.log(data)
+          setMinhaGrade(data.filter((item) => item.key === key))
+        } catch (error) {
+          throw Error(error.message)
+        }
+      }
+
+      async function dados(userId) {
+        try {
+          const data = await listaDados()
+        //  console.log(data)
+          setMeusDados(data.filter((item) => item.key === key))
         } catch (error) {
           throw Error(error.message)
         }
@@ -31,7 +46,9 @@ export function DadosContextProvider(props) {
 
       const contexto = {
         grade: minhaGrade,
+        dadosAluno: meusDados,
         listaGrade: listar,
+        listaDados: dados,
         insereGrade: inserir,
       }
     

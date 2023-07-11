@@ -1,14 +1,16 @@
 import './css/tabelas.css';
 import { useState, useContext, useEffect } from 'react';
-import { useForm } from 'react-hook-form'
 import DadosContext from '../contexts/DadosContext'
 import UserContext from '../contexts/UserContext';
 
 
+
 export default function gradeDisciplina() {
     const { userId } = useContext(UserContext)
-    const { grade, listaGrade, insereGrade } = useContext(DadosContext)
-  //  const gradeAluno = grade.find((item) => item.key == userId) //gradeAluno equivalente a tarefa
+    const { grade, listaGrade, listaDados, dadosAluno} = useContext(DadosContext)
+    const gradeAluno = grade.find((item) => item.key == userId) //gradeAluno equivalente a tarefa
+    const aluno = dadosAluno.find((item) => item.key == userId) //gradeAluno equivalente a tarefa
+
     
   //  const { register, handleSubmit } = useForm()
     const [loading, setLoading] = useState(false)
@@ -23,11 +25,13 @@ export default function gradeDisciplina() {
         }
       }*/
 
-      
+    console.log(grade)
+
     useEffect(() => {
     async function carrega() {
       setLoading(true)
-      await listaGrade(userId)
+      listaGrade(userId)
+      listaDados(userId)
       setLoading(false)
     }    
     carrega()
