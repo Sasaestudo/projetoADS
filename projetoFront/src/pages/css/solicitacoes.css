@@ -67,3 +67,14 @@
 .alinhaEsq{
     text-align: left;
 }
+@media(max-width:500px){
+    .tabela.solicitacoes td{
+        margin-top: 30px;
+        
+    }
+    .deferido,
+    .indeferido{
+        width: 3rem;
+        height: 1.5rem;
+    }
+}

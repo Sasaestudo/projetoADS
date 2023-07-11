@@ -26,7 +26,8 @@
   .listaMenu ul{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    align-items: center;
+    justify-content: space-between;
     width: -webkit-fill-available;
     margin: 0 10%;
     gap: 20px;
@@ -37,12 +38,31 @@
     font-family: 'Roboto', sans-serif;
   }
 
-  .listaMenu button a{
-    background-color: #e17d00;
+  .botao{
+   background-color: #e17d00;
    border-radius: 3px;
    border: 2px solid #e17d00;
    font-family: 'Roboto', sans-serif;
    font-weight: 400;
    padding: 2px;
    color: #f2f2f2;
+   padding: 6px 15px;
   }
+@media(max-width:1000px){
+  .listaMenu ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+}
+@media(max-width:600px){
+.listaMenu{
+display: grid;
+grid-template-columns: 1fr;
+text-align: center;
+}
+.listaMenu h3{
+  margin-bottom: 10px;
+  text-align: center;
+}
+}

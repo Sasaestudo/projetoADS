@@ -8,7 +8,7 @@
     .ajuda h1{
       text-align: center;
       background-color: #f2f2f2;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
     .ajuda div:nth-child(even) {
       background-color:lightgray;
@@ -29,7 +29,10 @@
     .ajuda dt, dl{
       text-align: left;
     }
-    
-    .ajuda div:nth-child(-n+4) {
-      margin-bottom: 20px;
+    .ajuda div{
+      padding: 10px;
     }
+    .ajuda div:nth-child(-n+4) {  
+      border-radius: 5px;
+    }
+ 

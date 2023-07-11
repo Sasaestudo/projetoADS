@@ -16,7 +16,7 @@ export default function solicitacoes() {
 
       <section className='ContainerSection'>
         <h1>Historico de Solicitações</h1>
-        <div className='tabela'>
+        <div className='tabela solicitacoes'>
           <table>
             <tbody>
               <tr>

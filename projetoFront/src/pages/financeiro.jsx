@@ -14,7 +14,7 @@ export default function financeiro() {
     <>
       <section className="ContainerSection">
         <h1>Financeiro</h1>
-        <div className="tabela">
+        <div className="tabela financeiro">
           <table>
             <tbody>
               <tr>

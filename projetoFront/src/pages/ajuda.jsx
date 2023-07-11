@@ -9,7 +9,7 @@ export default function ajuda(){
             <dl>
               <div>
                 <dt>Qual forma de pagamento vocês aceitam?</dt>
-                <dd>Aceitamos pagamentos parcelados em todos os cartões de crédito. Para pagamentos à vista também aceitamos PIX e boleto, disponíveis na opção "Financeiro" do Menu. </dd>
+                <dd><span className='marcador'></span>Aceitamos pagamentos parcelados em todos os cartões de crédito. Para pagamentos à vista também aceitamos PIX e boleto, disponíveis na opção "Financeiro" do Menu. </dd>
               </div>
               <div>
                 <dt>Como posso trancar o curso?</dt>

@@ -16,27 +16,17 @@ const handleSair=() => {
     <nav className='listaMenu'> 
     <h3>FACIT {userId}</h3>
       <ul>
-        <li>
-          <NavLink to="/home">Home</NavLink>
-        </li>
-        <li>
-          <NavLink to="/notas">Notas</NavLink>
-        </li>
-        <li>
-          <NavLink to="/grade">Grade Horária</NavLink>
-        </li>
-        <li>
-          <NavLink to="/financeiro">Financeiro</NavLink>
-        </li>
-        <li>
-          <NavLink to="/solicitacoes">Solicitações</NavLink>
-        </li>
-        <li><a href="https://www.baixelivros.com.br/?s=programa%C3%A7%C3%A3o" target="_blank">Biblioteca</a>
-        </li>
-        <li><NavLink to="/ajuda">Ajuda</NavLink>
-</li> 
+        <li><NavLink to="/home">Home</NavLink></li>
+        <li><NavLink to="/notas">Notas</NavLink></li>
+        <li><NavLink to="/grade">Grade Horária</NavLink></li>
+        <li><NavLink to="/financeiro">Financeiro</NavLink></li>
+        <li><NavLink to="/solicitacoes">Solicitações</NavLink></li>
+        <li><a href="https://www.baixelivros.com.br/?s=programa%C3%A7%C3%A3o" target="_blank">Biblioteca</a></li>
+        <li><NavLink to="/ajuda">Ajuda</NavLink></li> 
+       <li><button className='botao'><Link to="/" onClick={handleSair}>Sair</Link></button></li>
       </ul>
-      <button><Link to="/" onClick={handleSair}>Sair</Link></button>
+      
+
     </nav>
     
   );

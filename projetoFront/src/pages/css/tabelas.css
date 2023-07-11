@@ -55,3 +55,15 @@
   margin-top: 20px;
   background-color: lightgrey;
 }
+@media(max-width:1000px){
+  .tabela.solicitacoes{
+    font-size: 80%;
+  }
+}
+@media(max-width:800px){
+  .tabela.solicitacoes,
+  .tabela.notas,
+  .tabela.financeiro{
+    font-size: 60%;
+  }
+}
