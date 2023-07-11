@@ -1,9 +1,9 @@
-import { Urltabela } from "./FirebaseConfig"
+import { urlApi, Urltabela } from "./FirebaseConfig"
 
 // GET obter, listar
 export async function listaGrade() { //equivalente a lista tarefas
   let grade = [] //equivalente a tarefas
-  await fetch(Urltabela + "users/"+{userId}+"/dados.json")
+  await fetch(Urltabela + "grade.json")
     .then((response) => response.json())
     .then((data) => {
       for (let key in data) {
@@ -12,19 +12,6 @@ export async function listaGrade() { //equivalente a lista tarefas
     })
     .catch((error) => { throw Error("Erro!") })
   return grade
-}
-
-export async function listaDados() { //equivalente a lista tarefas
-  let dadosAluno = [] //equivalente a tarefas
-  await fetch(Urltabela + "users/"+{userId}+"/dados.json")
-    .then((response) => response.json())
-    .then((data) => {
-      for (let key in data) {
-        dadosAluno.push({ key, ...data[key] })
-      }
-    })
-    .catch((error) => { throw Error("Erro!") })
-  return dadosAluno
 }
 
 //POST criar, inserir
